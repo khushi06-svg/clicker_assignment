@@ -29,7 +29,7 @@ const GamePage = () => {
     if (gameStarted) {
       fetchLeaderboard();
     }
-  }, [score, gameStarted]);
+  }, [score, gameStarted, apiUrl]); // Add apiUrl to the dependency array
 
   const handleUsernameSubmit = async () => {
     if (username.trim()) {
