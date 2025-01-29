@@ -5,10 +5,13 @@ import { toast } from "react-toastify";
 const ClickerButton = ({ username, setScore, setPrizes }) => {
   const [loading, setLoading] = useState(false);
 
+  // Fetch the API URL from environment variable
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000"; // Default to localhost if not set
+
   const handleClick = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.post(`http://localhost:5000/api/game/click/${username}`);
+      const { data } = await axios.post(`${apiUrl}/api/game/click/${username}`);
       setScore(data.counter);
       setPrizes(data.prizes);
 
