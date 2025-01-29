@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "cookie/package.json",
+        "use": "@vercel/react"
+      },
+      {
+        "src": "backend/main.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/backend/main.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/cookie/build/$1"
+      }
+    ]
+  }
+  
