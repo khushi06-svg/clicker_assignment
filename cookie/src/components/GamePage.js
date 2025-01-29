@@ -14,10 +14,13 @@ const GamePage = () => {
   const [leaderboard, setLeaderboard] = useState([]);
   const [gameStarted, setGameStarted] = useState(false);
 
+  // Fetch the API URL from environment variable
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000"; // Default to localhost if not set
+
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/game/leaderboard");
+        const { data } = await axios.get(`${apiUrl}/api/game/leaderboard`);
         setLeaderboard(data);
       } catch (error) {
         console.log("Error fetching leaderboard", error);
@@ -31,7 +34,7 @@ const GamePage = () => {
   const handleUsernameSubmit = async () => {
     if (username.trim()) {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/game/users/${username}`);
+        const { data } = await axios.get(`${apiUrl}/api/game/users/${username}`);
         setScore(data.counter);
         setPrizes(data.prizes);
         setGameStarted(true);
