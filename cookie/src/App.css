@@ -1,0 +1,275 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #2e1d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-container {
+  width: 420px;
+  background: linear-gradient(to bottom, #5a3929cf, #3e2a1e);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color:white;
+}
+
+h2, h3 {
+  color: white;
+  font-size: 18px;
+}
+
+.cookie {
+  width: 140px;
+  height: 140px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  }
+.cookie:active {
+  transform: scale(1.1);
+}
+
+.score-board {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.score-button {
+  background: #ffcc00;
+  color: #222;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+.score-display h2, .score-display h3 {
+  font-size: 24px;
+  color: #ffffff;
+}
+.leaderboard h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.score-button:active {
+  transform: scale(0.9);
+}
+
+.leaderboard {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.leaderboard h3 {
+  font-size: 16px;
+}
+
+.leaderboard p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.prizes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.prize-box {
+  width: 90px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ffcc00;
+  border-radius: 5px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+
+.username-form {
+  text-align: center;
+}
+
+.username-form input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.username-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.username-form button:hover {
+  background-color: #45a049;
+}
+
+.leaderboard {
+  background: #5a3e2b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.leaderboard-card {
+  background: #3d2a1e;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 120px;
+  max-width: 120px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 8px;
+  background: #a08968;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress {
+  height: 100%;
+  background: gold;
+  border-radius: 4px;
+}
+
+.rank-1 .rank-label { color: gold; }
+.rank-2 .rank-label { color: silver; }
+.rank-3 .rank-label { color: #cd7f32; } 
+
+.custom-toast {
+  background-color: #0f0101 !important;
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 100px !important;
+  padding: 15px !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+}
+
+.Toastify__toast-container--bottom-center {
+  bottom: 10px !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  background: #222222e0;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 380px;
+  border: 3px solid #cf851b;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+h4 {
+  color:white;
+  text-align:left;
+  margin-bottom: 15px;
+  margin-top:30px;
+}
+
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.start-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #9f5635;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-button:hover {
+  background-color: #c7754e;
+}
